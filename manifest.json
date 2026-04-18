@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Proxy Guard Blocker",
+  "description": "Blocks selected domains whenever Chrome appears to be using a direct connection.",
+  "version": "0.1.0",
+  "minimum_chrome_version": "96",
+  "permissions": [
+    "alarms",
+    "declarativeNetRequest",
+    "offscreen",
+    "proxy",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*",
+    "http://localhost:8765/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Proxy Guard Blocker",
+    "default_popup": "popup.html"
+  }
+}

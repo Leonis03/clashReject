@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proxy Guard Blocker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <div>
+          <h1>Proxy Guard Blocker</h1>
+          <p class="subtitle">Blocks selected domains when Chrome looks direct-connected.</p>
+        </div>
+        <span id="pill" class="pill pill-idle">Checking</span>
+      </header>
+
+      <section class="card">
+        <dl class="details">
+          <div class="row">
+            <dt>Mode</dt>
+            <dd id="mode">-</dd>
+          </div>
+          <div class="row">
+            <dt>System</dt>
+            <dd id="system-proxy">-</dd>
+          </div>
+          <div class="row">
+            <dt>Decision</dt>
+            <dd id="decision">-</dd>
+          </div>
+          <div class="row">
+            <dt>Updated</dt>
+            <dd id="updated">-</dd>
+          </div>
+        </dl>
+        <p id="reason" class="reason">Waiting for background sync.</p>
+      </section>
+
+      <section class="card">
+        <h2>Domains</h2>
+        <ul id="domains" class="domain-list"></ul>
+      </section>
+
+      <section id="proxy-error-card" class="card hidden">
+        <h2>Last Proxy Error</h2>
+        <p id="proxy-error-text" class="reason"></p>
+      </section>
+
+      <footer class="footer">
+        <button id="refresh" type="button">Refresh now</button>
+        <p class="footnote">
+          In <code>system</code> mode the extension asks a local helper on
+          <code>127.0.0.1:8765</code> for the real Windows proxy state.
+        </p>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
