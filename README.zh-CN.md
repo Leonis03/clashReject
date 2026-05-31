@@ -73,7 +73,7 @@ powershell -ExecutionPolicy Bypass -File .\remove-helper-autostart.ps1
 - 弹窗会显示 Chrome 当前代理模式，以及扩展当前是否处于阻止状态。
 - 在 `system` 模式下，如果 helper 不可用，扩展会默认阻止访问，这是故意设计的 fail-closed。
 - 扩展通过隐藏的 offscreen 文档持续轮询 helper，因此切换 Windows 系统代理后通常不需要手动点击 `Refresh now`。
-- helper 当前将 Windows 手动代理和 PAC URL 都视为“系统代理已开启”。这与 Clash for Windows 常见的 `System Proxy` 行为一致。
+- helper 当前将 Windows 手动代理和 PAC URL 都视为“系统代理已开启”。这与 Clash 常见的 `System Proxy` 行为一致。
 
 ## 致谢
 

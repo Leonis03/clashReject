@@ -75,7 +75,7 @@ powershell -ExecutionPolicy Bypass -File .\remove-helper-autostart.ps1
 - The popup shows the proxy mode Chrome reports and whether the block rules are active.
 - In `system` mode, if the helper is unreachable, the extension fails closed and blocks the protected domains.
 - The extension keeps a hidden offscreen monitor alive so Windows proxy toggles are picked up automatically without clicking `Refresh now`.
-- The helper currently treats Windows manual proxy and PAC URL as "system proxy enabled". That matches the common Clash for Windows toggle behavior.
+- The helper currently treats Windows manual proxy and PAC URL as "system proxy enabled". That matches the common Clash `System Proxy` behavior.
 
 ## Acknowledgements
 
