@@ -76,3 +76,7 @@ powershell -ExecutionPolicy Bypass -File .\remove-helper-autostart.ps1
 - In `system` mode, if the helper is unreachable, the extension fails closed and blocks the protected domains.
 - The extension keeps a hidden offscreen monitor alive so Windows proxy toggles are picked up automatically without clicking `Refresh now`.
 - The helper currently treats Windows manual proxy and PAC URL as "system proxy enabled". That matches the common Clash for Windows toggle behavior.
+
+## Acknowledgements
+
+[Linux DO Community](https://linux.do)
